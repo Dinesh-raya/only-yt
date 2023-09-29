@@ -6,6 +6,14 @@ import requests
 from requests.exceptions import ChunkedEncodingError
 import time
 
+st.markdown(f"""
+            <style>
+            .stApp {{background-image: url("https://images.unsplash.com/photo-1516557070061-c3d1653fa646?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+                     background-attachment: fixed;
+                     background-size: cover}}
+         </style>
+         """, unsafe_allow_html=True)
+
 def download_youtube_video(url, resolution):
     try:
         ydl_opts = {
@@ -69,7 +77,7 @@ def perform_youtube_search(query):
         return []
 
 def main():
-    st.title("DR-Media Downloader")
+    st.title(":rainbow[HI THERE WELCOME TO :_DR- VIDEO DOWNLOADER_] :sunglasses:")
     media_choice = st.radio("Choose Media", ["YouTube", "Search"])
 
     if media_choice == "YouTube":
